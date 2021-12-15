@@ -4,6 +4,7 @@ metadata:
   name: hubbook-ui
   namespace: hub
 spec:
+  type: NodePort
   ports:
   - port: 80
     targetPort: 80
