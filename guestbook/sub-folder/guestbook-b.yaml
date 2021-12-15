@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: guestbook-b-ui
+        change: uno
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
