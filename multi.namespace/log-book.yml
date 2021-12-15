@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logbook-ui
+  namespace: log
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: logbook-ui
+  template:
+    metadata:
+      labels:
+        app: logbook-ui
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        name: logbook-ui
+        ports:
+        - containerPort: 80
